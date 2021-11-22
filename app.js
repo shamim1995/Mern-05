@@ -1,4 +1,7 @@
 
+
+//Result
+
 let shamim = new Shamim();
 
 let name=prompt(`name`)
@@ -30,6 +33,9 @@ Religion= ${rel}    =${ shamim.gpa(rel) }      =${ shamim.grade ( shamim. gpa (r
 `);
 
 
+
+
+//construction function
 
 let dev = new Dev();
 
