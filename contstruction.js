@@ -1,4 +1,6 @@
 function Shamim() {
+
+    //gpa calculation
     
     this.gpa=function (marks) {  
         
@@ -29,6 +31,9 @@ function Shamim() {
         }
         return gpa;
     }
+
+
+    //grade calculation
 
 
     this.grade= function(gpa) {
@@ -62,6 +67,8 @@ function Shamim() {
       
     }
 
+    //cgpa calculation
+
     this.cgpa= function (bn, en, math, ict, agre, social, rel) { 
         
         this.totalSub= ( bn + en + math + ict + agre + social + rel)
@@ -69,7 +76,7 @@ function Shamim() {
         this.totalResult=this.totalCal.toFixed(2);
         
         if(bn==0 || en==0 || math==0 || ict==0 || agre==0 || social==0 || rel==0 ){
-            return`Failed`
+            return` You Are Failed`
         }else{
             return ` Your CGPA= ${this.totalResult} & Your GRADE= ${shamim.grade(this.totalResult)} `
         }
@@ -77,3 +84,89 @@ function Shamim() {
      
 
 }
+
+
+//Age calculation all information one_five.js a import kora ase
+
+function Dev () { 
+
+    //age calculation
+
+    this.ageCal = function(name, age) {
+       
+        if(age >=0 && age <=8){
+            return ` ${name} You are ${age} years old and you are a children`
+        } else if (age > 8 && age<=17){
+            return ` ${name} you are ${age} years old. so you are a teenager`
+        }else if(age>17 && age <=28){
+            return `${name} you are ${age} years old. so you are a young people`
+        }else if(age>28 && age<110){
+            return `${name} you are ${age} years old. so you are a old people`
+        }else{
+            return `how is it possible`
+        }
+
+      }
+
+      //area calculation
+
+      this.area=function(type, length, width) {
+
+          if(type=='r'){
+              return length*width;
+          }else if(type=='s'){
+
+            return length*length;
+          }else if(type=='t'){
+              return (.5*length*width)
+          }
+      }
+
+      //age define calculation
+
+      this.ageDefine=function (name, years) {
+
+        this.years=2021-years
+
+          return `${name} you are ${this.years} years old`
+      }
+
+      //currency calculaiton
+
+       this.currency = function (currencyName, amount) {
+
+           if (currencyName == 'EURO') {
+
+               return amount * 109;
+           } else if (currencyName == 'USD') {
+
+               return amount * 84
+           } else if (currencyName == 'CAD') {
+
+               return amount * 67
+           } else if (currencyName = 'POUND') {
+
+               return amount * 116
+           }else{
+               return `please give the informaion`
+           }
+       }
+
+
+       //Bmi calculation
+
+       this.bmi=function (weight, feet) {
+           this.weight=weight;
+           this.height=feet/3.28;
+           this.mtr=this.height*this.height
+           this. bmiCal=this.weight/(this.mtr)
+
+        return this.bmiCal.toFixed(2);
+
+         }
+
+
+ }
+
+
+
